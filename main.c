@@ -3770,7 +3770,7 @@ void *client_thread(void *arg) {
             int cnt = 0;
             search_files_recursive(dir, q, sbuf, 32768, &ofs, &cnt, 0);
             ofs += snprintf(sbuf + ofs, 32768 - (size_t)ofs, "]}");
-            send_all(sock, sbuf, (size_t)ofs);
+            send_all(client_sock, sbuf, (size_t)ofs);
             free(sbuf);
         }
     }
