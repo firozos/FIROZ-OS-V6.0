@@ -1,0 +1,36 @@
+name: Build FIROZ OS v6 Titanium ELF
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Clang and Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang lld make wget unzip
+
+      - name: Install PS5 Payload SDK
+        run: |
+          wget -q https://github.com/ps5-payload-dev/sdk/releases/latest/download/ps5-payload-sdk.zip
+          sudo unzip -q -d /opt ps5-payload-sdk.zip
+          rm ps5-payload-sdk.zip
+
+      - name: Compile ELF Payload
+        run: |
+          sed -i 's/^    /\t/' Makefile
+          make
+
+      - name: Upload Compiled ELF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firoz-os-v6-titanium-elf
+          path: firoz_os_v6.elf
