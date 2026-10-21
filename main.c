@@ -3213,13 +3213,11 @@ void api_text_read(int sock, const char *filepath) {
 }
 // ============================================================================
 // FIROZ OS v6.0 - TITANIUM ARCHITECT EDITION (@firozfar051)
-// Part 4 of 4: Pure Vector SVG UI (PS5 WebKit Safe), DualSense Engine & Main
+// Part 4 of 4 (Section 1 of 2): Pure Vector SVG UI (PS5 Media WebKit Optimized)
 // ============================================================================
 
 const char *UI_PART1 =
-    "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\nCache-Control: no-store\r\nConnection: close\r\n\r\n"
     "<!DOCTYPE html><html lang='fa' dir='rtl'><head><meta charset='UTF-8'><title>FIROZ OS v6.0 Titanium</title>"
-    "<link rel='icon' type='image/png' href='/icon0.png'>"
     "<style>"
     ":root{"
     "  --bg1:#020617;--bg2:#091024;--bg3:#1e1b4b;"
@@ -3237,7 +3235,7 @@ const char *UI_PART1 =
     ".svg-lg{width:38px;height:38px;stroke:var(--accent);stroke-width:1.8;fill:none;}"
     "header{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;}"
     ".brand{display:flex;align-items:center;gap:12px;}"
-    ".logo-img{width:42px;height:42px;border-radius:11px;border:2px solid var(--accent);box-shadow:0 0 16px var(--glow);}"
+    ".logo-badge{width:42px;height:42px;border-radius:11px;border:2px solid var(--accent);box-shadow:0 0 16px var(--glow);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.3rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;}"
     "h1{margin:0;font-size:1.65rem;font-weight:900;letter-spacing:1px;text-shadow:0 0 18px var(--glow);}"
     ".tg-pill{display:flex;align-items:center;gap:6px;background:rgba(56,189,248,0.12);border:1px solid var(--border);padding:4px 12px;border-radius:99px;direction:ltr;font-weight:bold;color:var(--accent);font-size:0.9rem;}"
     ".top-actions{display:flex;gap:8px;align-items:center;}"
@@ -3282,7 +3280,7 @@ const char *UI_PART2 =
     ".drive-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));}"
     ".term-box{flex:1;background:#05080f;border:1px solid var(--border);border-radius:15px;padding:14px;font-family:monospace;font-size:0.94rem;color:#22c55e;overflow-y:auto;direction:ltr;text-align:left;white-space:pre-wrap;}"
     "#music-bar{display:none;align-items:center;gap:14px;background:var(--glass);backdrop-filter:blur(22px);border:2px solid var(--accent);border-radius:14px;padding:8px 18px;margin-top:8px;box-shadow:0 0 25px var(--glow);direction:ltr;}"
-    ".disc-art{width:40px;height:40px;border-radius:50%;border:2px solid var(--accent);animation:spin 4s linear infinite;}"
+    ".disc-art{width:40px;height:40px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;animation:spin 4s linear infinite;}"
     ".disc-art.paused{animation-play-state:paused;}"
     ".m-info{min-width:160px;max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:bold;}"
     ".m-slider{flex:1;accent-color:var(--accent);height:6px;cursor:pointer;}"
@@ -3492,6 +3490,10 @@ const char *UI_PART4 =
     "    });"
     "  }catch(e){}"
     "}";
+// ============================================================================
+// FIROZ OS v6.0 - TITANIUM ARCHITECT EDITION (@firozfar051)
+// Part 4 of 4 (Section 2 of 2): UI Body, Single-Buffer HTTP Engine & Safe Main
+// ============================================================================
 
 const char *UI_PART5 =
     "async function waitTaskCompletion(){"
@@ -3634,7 +3636,7 @@ const char *UI_PART5 =
     "  <button class='act-tile focusable' style='border-color:#f43f5e;color:#f43f5e;' onclick=\"runQuickAction('del')\">حذف انتخاب‌شده‌ها</button>"
     "  <button class='act-tile focusable' onclick='toggleActionModal(false)'>[X] بستن منو</button>"
     "</div></div></div>"
-    "<header><div class='brand'><img src='/icon0.png' class='logo-img'><h1>FIROZ OS <span style='font-size:0.9rem;color:var(--accent);'>v6.0 TITANIUM</span></h1><div class='tg-pill'><span>@firozfar051</span></div></div><div class='top-actions'><button class='icon-btn focusable' onclick=\"document.getElementById('elf-ram-inp').click()\">[ELF] تزریق پیلود به RAM</button><button class='icon-btn focusable' onclick=\"fetch('/api/kill_app',{method:'POST'});showToast('بستن بازی فعال ارسال شد')\">[KILL] بستن بازی فعال</button><a class='icon-btn focusable' style='background:#dc2626;border-color:#f87171;color:#fff;' href='/exit'>[EXIT] توقف سرور</a></div></header>"
+    "<header><div class='brand'><div class='logo-badge'>F</div><h1>FIROZ OS <span style='font-size:0.9rem;color:var(--accent);'>v6.0 TITANIUM</span></h1><div class='tg-pill'><span>@firozfar051</span></div></div><div class='top-actions'><button class='icon-btn focusable' onclick=\"document.getElementById('elf-ram-inp').click()\">[ELF] تزریق پیلود به RAM</button><button class='icon-btn focusable' onclick=\"fetch('/api/kill_app',{method:'POST'});showToast('بستن بازی فعال ارسال شد')\">[KILL] بستن بازی فعال</button><a class='icon-btn focusable' style='background:#dc2626;border-color:#f87171;color:#fff;' href='/exit'>[EXIT] توقف سرور</a></div></header>"
     "<div class='tab-bar'>"
     "  <button id='tab-FILE' class='tab-btn focusable active' onclick=\"setMode('FILE')\">فایل منیجر</button>"
     "  <button id='tab-RUN' class='tab-btn focusable' onclick=\"setMode('RUN')\">بازی‌ها و استودیو</button>"
@@ -3669,19 +3671,54 @@ const char *UI_PART5 =
     "    <button class='act-tile focusable' onclick=\"setTheme('oled')\">OLED Pitch Black</button>"
     "    <button class='act-tile focusable' onclick=\"setTheme('light')\">Frost Glass Light</button>"
     "    <button class='act-tile focusable' style='grid-column:span 3;border-color:#10b981;' onclick='cleanCacheNow()'>پاک‌سازی هوشمند کش بازی‌های PS4 و PS5 (Smart Cache Cleaner)</button>"
-    "    <button class='act-tile focusable' style='grid-column:span 3;border-color:var(--accent);' onclick=\"fetch('/api/install_tile',{method:'POST'});showToast('آیکون FIROZ OS در صفحه اصلی PS5 ثبت شد!')\">نصب/تعمیر آیکون FIROZ OS در صفحه اصلی کنسول (Home Screen Tile)</button>"
+    "    <button class='act-tile focusable' style='grid-column:span 3;border-color:var(--accent);' onclick=\"fetch('/api/install_tile',{method:'POST'});showToast('آیکون FIROZ OS در بخش Media ثبت شد!')\">نصب/تعمیر آیکون FIROZ OS در بخش Media کنسول</button>"
     "  </div></div>"
     "</div>"
-    "<div id='music-bar'><img src='/icon0.png' id='m-disc' class='disc-art'><div class='m-info' id='m-title'>Track.mp3</div><button class='icon-btn focusable' onclick='toggleAudio()'>[PLAY/PAUSE]</button><input type='range' id='m-seek' class='m-slider' value='0' min='0' max='100' oninput='seekAudio(this.value)'><span id='m-time' style='font-family:monospace;'>00:00 / 00:00</span><audio id='aud-el' ontimeupdate=\"if(this.duration){document.getElementById('m-seek').value=(this.currentTime/this.duration)*100;document.getElementById('m-time').innerText=formatTime(this.currentTime)+' / '+formatTime(this.duration);}\"></audio></div>"
+    "<div id='music-bar'><div id='m-disc' class='disc-art'>♪</div><div class='m-info' id='m-title'>Track.mp3</div><button class='icon-btn focusable' onclick='toggleAudio()'>[PLAY/PAUSE]</button><input type='range' id='m-seek' class='m-slider' value='0' min='0' max='100' oninput='seekAudio(this.value)'><span id='m-time' style='font-family:monospace;'>00:00 / 00:00</span><audio id='aud-el' ontimeupdate=\"if(this.duration){document.getElementById('m-seek').value=(this.currentTime/this.duration)*100;document.getElementById('m-time').innerText=formatTime(this.currentTime)+' / '+formatTime(this.duration);}\"></audio></div>"
     "</body></html>";
+
+static int g_http_listen_sock = -1;
+
+static void send_full_ui_page(int client_sock) {
+    size_t l1 = strlen(UI_PART1);
+    size_t l2 = strlen(UI_PART2);
+    size_t l3 = strlen(UI_PART3);
+    size_t l4 = strlen(UI_PART4);
+    size_t l5 = strlen(UI_PART5);
+    size_t body_len = l1 + l2 + l3 + l4 + l5;
+
+    char hdr[256];
+    int hlen = snprintf(hdr, sizeof(hdr),
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/html; charset=UTF-8\r\n"
+        "Cache-Control: no-store, no-cache, must-revalidate\r\n"
+        "Content-Length: %zu\r\n"
+        "Connection: close\r\n\r\n", body_len);
+
+    char *full_page = malloc((size_t)hlen + body_len + 1);
+    if (!full_page) return;
+
+    size_t pos = 0;
+    memcpy(full_page + pos, hdr, (size_t)hlen); pos += (size_t)hlen;
+    memcpy(full_page + pos, UI_PART1, l1);      pos += l1;
+    memcpy(full_page + pos, UI_PART2, l2);      pos += l2;
+    memcpy(full_page + pos, UI_PART3, l3);      pos += l3;
+    memcpy(full_page + pos, UI_PART4, l4);      pos += l4;
+    memcpy(full_page + pos, UI_PART5, l5);      pos += l5;
+
+    send_all(client_sock, full_page, pos);
+    free(full_page);
+}
 
 void *client_thread(void *arg) {
     int client_sock = *(int *)arg;
     free(arg);
 
-    tune_socket_performance(client_sock);
-    struct timeval tv = { 45, 0 };
+    int nodelay = 1;
+    setsockopt(client_sock, IPPROTO_TCP, TCP_NODELAY, &nodelay, sizeof(nodelay));
+    struct timeval tv = { 30, 0 };
     setsockopt(client_sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+    setsockopt(client_sock, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
 
     char *buffer = malloc(32768);
     if (!buffer) { close(client_sock); return NULL; }
@@ -3712,7 +3749,16 @@ void *client_thread(void *arg) {
             "<!DOCTYPE html><html dir='rtl'><body style='background:#020617;color:#38bdf8;font-family:Tahoma;text-align:center;padding-top:18%;'>"
             "<h1>FIROZ OS v6.0 Titanium متوقف شد.</h1><p style='color:#fff;'>اکنون می‌توانید پنجره را ببندید.</p></body></html>";
         send_all(client_sock, exit_res, strlen(exit_res));
+        shutdown(client_sock, SHUT_WR);
+        close(client_sock);
+        free(buffer);
         g_server_running = 0;
+        if (g_http_listen_sock >= 0) {
+            close(g_http_listen_sock);
+            g_http_listen_sock = -1;
+        }
+        _exit(0);
+        return NULL;
     }
     else if (strncmp(req_path, "/icon0.png", 10) == 0) {
         char hdr[256];
@@ -4047,53 +4093,40 @@ void *client_thread(void *arg) {
             }
         }
     }
-        else if (strcmp(req_path, "/") == 0 || strncmp(req_path, "/index.html", 11) == 0) {
-        // جدا کردن هدر از بادی برای محاسبه دقیق سایز HTML
-        const char *body1 = strstr(UI_PART1, "\r\n\r\n");
-        if (body1) body1 += 4; else body1 = UI_PART1;
-        
-        size_t body_len = strlen(body1) + strlen(UI_PART2) + strlen(UI_PART3) + strlen(UI_PART4) + strlen(UI_PART5);
-        
-        char hdr[256];
-        snprintf(hdr, sizeof(hdr),
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: text/html; charset=UTF-8\r\n"
-            "Cache-Control: no-store\r\n"
-            "Content-Length: %zu\r\n"
-            "Connection: close\r\n\r\n", body_len);
-            
-        send_all(client_sock, hdr, strlen(hdr));
-        send_all(client_sock, body1, strlen(body1));
-        send_all(client_sock, UI_PART2, strlen(UI_PART2));
-        send_all(client_sock, UI_PART3, strlen(UI_PART3));
-        send_all(client_sock, UI_PART4, strlen(UI_PART4));
-        send_all(client_sock, UI_PART5, strlen(UI_PART5));
-    }
-    else {
-        const char *err = "HTTP/1.1 404 Not Found\r\nConnection: close\r\n\r\n404 Not Found";
-        send_all(client_sock, err, strlen(err));
+    else if (strcmp(req_path, "/") == 0 || strncmp(req_path, "/index.html", 11) == 0 || req_path[0] == '/') {
+        send_full_ui_page(client_sock);
     }
 
+    shutdown(client_sock, SHUT_WR);
+    usleep(15000);
     free(buffer);
     close(client_sock);
     return NULL;
 }
 
-static void stop_previous_instance(int port) {
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock < 0) return;
-    struct sockaddr_in addr;
-    memset(&addr, 0, sizeof(addr));
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-    addr.sin_port = htons((uint16_t)port);
-    if (connect(sock, (struct sockaddr *)&addr, sizeof(addr)) == 0) {
-        const char *msg = "GET /exit HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n";
-        send(sock, msg, strlen(msg), 0);
+static void stop_previous_instance(int base_port) {
+    int any_stopped = 0;
+    for (int p = base_port; p < base_port + 10; p++) {
+        int sock = socket(AF_INET, SOCK_STREAM, 0);
+        if (sock < 0) continue;
+        struct timeval tv = { 1, 0 };
+        setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
+        setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+
+        struct sockaddr_in addr;
+        memset(&addr, 0, sizeof(addr));
+        addr.sin_family = AF_INET;
+        addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+        addr.sin_port = htons((uint16_t)p);
+        if (connect(sock, (struct sockaddr *)&addr, sizeof(addr)) == 0) {
+            const char *msg = "GET /exit HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n";
+            send(sock, msg, strlen(msg), 0);
+            any_stopped = 1;
+        }
         close(sock);
-        usleep(300000);
-    } else {
-        close(sock);
+    }
+    if (any_stopped) {
+        usleep(1300000);
     }
 }
 
@@ -4105,6 +4138,7 @@ int main(void) {
 
     int server_sock = socket(AF_INET, SOCK_STREAM, 0);
     if (server_sock < 0) return 1;
+    g_http_listen_sock = server_sock;
 
     int opt = 1;
     setsockopt(server_sock, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
@@ -4114,15 +4148,31 @@ int main(void) {
 
     struct sockaddr_in server_addr;
     int bound = 0;
-    for (int p = HTTP_PORT; p < HTTP_PORT + 10; p++) {
+
+    for (int retry = 0; retry < 5 && !bound; retry++) {
         memset(&server_addr, 0, sizeof(server_addr));
         server_addr.sin_family = AF_INET;
         server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-        server_addr.sin_port = htons((uint16_t)p);
+        server_addr.sin_port = htons((uint16_t)HTTP_PORT);
         if (bind(server_sock, (struct sockaddr *)&server_addr, sizeof(server_addr)) == 0) {
-            g_http_port = p;
+            g_http_port = HTTP_PORT;
             bound = 1;
             break;
+        }
+        usleep(300000);
+    }
+
+    if (!bound) {
+        for (int p = HTTP_PORT + 1; p < HTTP_PORT + 10; p++) {
+            memset(&server_addr, 0, sizeof(server_addr));
+            server_addr.sin_family = AF_INET;
+            server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+            server_addr.sin_port = htons((uint16_t)p);
+            if (bind(server_sock, (struct sockaddr *)&server_addr, sizeof(server_addr)) == 0) {
+                g_http_port = p;
+                bound = 1;
+                break;
+            }
         }
     }
 
@@ -4134,15 +4184,14 @@ int main(void) {
     char ip[64];
     get_console_ip(ip, sizeof(ip));
 
-    ps5_notify("FIROZ OS v6.0 Titanium Active!\nWeb: %s:%d | Turbo FTP: %d", ip, g_http_port, FTP_PORT);
-
     spawn_thread(power_guard_thread, NULL);
     spawn_thread(klog_reader_thread, NULL);
     spawn_thread(ftp_server_thread, NULL);
 
     install_firoz_homescreen_tile(g_http_port);
-    auto_launch_firoz_ui(g_http_port);
-    klog_appendf("[FIROZ OS v6.0] Web: http://%s:%d | Turbo FTP: %s:%d\n", ip, g_http_port, ip, FTP_PORT);
+
+    ps5_notify("FIROZ OS v6.0 Titanium Ready!\nMedia Port: %d | FTP: %d", g_http_port, FTP_PORT);
+    klog_appendf("[FIROZ OS v6.0] Web: http://127.0.0.1:%d | Turbo FTP: %s:%d\n", g_http_port, ip, FTP_PORT);
 
     while (g_server_running) {
         fd_set readfds;
@@ -4170,6 +4219,6 @@ int main(void) {
         }
     }
 
-    close(server_sock);
+    if (g_http_listen_sock >= 0) close(g_http_listen_sock);
     return 0;
 }
