@@ -4047,8 +4047,23 @@ void *client_thread(void *arg) {
             }
         }
     }
-    else if (strcmp(req_path, "/") == 0 || strncmp(req_path, "/index.html", 11) == 0) {
-        send_all(client_sock, UI_PART1, strlen(UI_PART1));
+        else if (strcmp(req_path, "/") == 0 || strncmp(req_path, "/index.html", 11) == 0) {
+        // جدا کردن هدر از بادی برای محاسبه دقیق سایز HTML
+        const char *body1 = strstr(UI_PART1, "\r\n\r\n");
+        if (body1) body1 += 4; else body1 = UI_PART1;
+        
+        size_t body_len = strlen(body1) + strlen(UI_PART2) + strlen(UI_PART3) + strlen(UI_PART4) + strlen(UI_PART5);
+        
+        char hdr[256];
+        snprintf(hdr, sizeof(hdr),
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: text/html; charset=UTF-8\r\n"
+            "Cache-Control: no-store\r\n"
+            "Content-Length: %zu\r\n"
+            "Connection: close\r\n\r\n", body_len);
+            
+        send_all(client_sock, hdr, strlen(hdr));
+        send_all(client_sock, body1, strlen(body1));
         send_all(client_sock, UI_PART2, strlen(UI_PART2));
         send_all(client_sock, UI_PART3, strlen(UI_PART3));
         send_all(client_sock, UI_PART4, strlen(UI_PART4));
